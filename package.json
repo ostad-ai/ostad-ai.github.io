@@ -1,0 +1,28 @@
+{
+  "name": "ostad-ai.github.io",
+  "version": "1.0.0",
+  "description": "This is for GitHub pages of me",
+  "main": "index.html",
+    "scripts": {
+        "start": "npm run lite",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lite": "lite-server"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ostad-ai/ostad-ai.github.io.git"
+  },
+  "keywords": [
+    "ostad",
+    "ai"
+  ],
+  "author": "Ostad AI",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ostad-ai/ostad-ai.github.io/issues"
+  },
+  "homepage": "https://github.com/ostad-ai/ostad-ai.github.io#readme",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
