@@ -16,7 +16,7 @@ let noiseT = 0.
         frameRate(15)
         if (windowHeight > windowWidth) {
             noX = 15
-            noY = 25
+            noY = 22
         }
         
        
