@@ -10,10 +10,14 @@
                         }
                         let timeOffset = 0.
                         function draw() {
-        background(220)
-                            const maxWidth = windowWidth
-                            const noX = 30
-                            const noY = 20
+                            background(220)
+                            let noX = 28
+                            let noY = 18
+                            if (windowHeight > windowWidth)
+                            {
+                                noX = 20
+                                noY = 30
+                             }
                             const scaleN = .01
                             let noiseT = 0.
                             let gridX = windowWidth / noX
@@ -23,7 +27,7 @@
                             //noFill()
                             for (let xi = 0; xi < noX; ++xi) {
                                 for (let yi = 0; yi < noY; ++yi) {
-        push()
+                                    push()
                                     translate(xi * gridX, yi * gridY)
                                     noiseT = noise(scaleN * xi, scaleN * yi, timeOffset)
                                     rotate(100 * noiseT)
