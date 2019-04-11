@@ -2,26 +2,34 @@
 //written by Hamed Shah-Hosseni, Apr. 2019
 //ostad-ai.github.io
 
+
+let timeOffset = 0.
+let noX = 28
+let noY = 18
+let gridX
+let gridY
+let scaleN = .01
+let noiseT = 0.
     function setup() {
         createCanvas(windowWidth, windowHeight)
                             stroke(0)
-                            frameRate(15)
+        frameRate(15)
+        if (windowHeight > windowWidth) {
+            noX = 18
+            noY = 28
+        }
+        
+       
+        gridX = windowWidth / noX
+        gridY = windowHeight / noY
 
                         }
-                        let timeOffset = 0.
+                        
                         function draw() {
                             background(220)
-                            let noX = 28
-                            let noY = 18
-                            if (windowHeight > windowWidth)
-                            {
-                                noX = 20
-                                noY = 30
-                             }
-                            const scaleN = .01
-                            let noiseT = 0.
-                            let gridX = windowWidth / noX
-                            let gridY = windowHeight / noY
+                            
+                            
+                            
                             stroke(0)
                             strokeWeight(5)
                             //noFill()
