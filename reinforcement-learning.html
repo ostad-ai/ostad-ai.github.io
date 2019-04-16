@@ -1,16 +1,20 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Generative art with p5.js</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./node_for_git/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./p5_for_git/p5.js"></script>
-    
-</head>
 
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Data Science with Python</title>
+    <script>
+        function myitemclick() {
+            document.getElementById("mycontent").innerHTML = "<iframe width='100%' height='100%' style='border:none;' src = 'data-science-with-py1.html' ></iframe > ";
+        }
+    </script>
+
+</head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light mynavbg">
         <div class="container-fluid">
@@ -23,19 +27,19 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="./index.html">Home </a>
                     </li>
-                    <li class="nav-item dropdown ">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="MenuDS" role="button" data-toggle="dropdown">Data Science</a>
                         <div class="dropdown-menu" aria-labelledby="MenuDS">
                             <a class="dropdown-item" href="./data-science-with-python.html">Data Science with Python</a>
                             <a class="dropdown-item" href="#">Data Science with KNIME</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="MenuL" role="button" data-toggle="dropdown">Learning in AI</a>
                         <div class="dropdown-menu" aria-labelledby="MenuL">
                             <a class="dropdown-item" href="./deep-learning.html">Deep Learning</a>
                             <a class="dropdown-item" href="./machine-learning.html">Machine Learning</a>
-                            <a class="dropdown-item" href="./reinforcement-learning.html">Reinforcement Learning</a>
+                            <a class="dropdown-item" href="#">Reinforcement Learning</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -66,7 +70,7 @@
                             <a class="dropdown-item" href="#">Watermarking</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown active">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="MenuCG" role="button" data-toggle="dropdown">Computer Graphics</a>
                         <div class="dropdown-menu" aria-labelledby="MenuCG">
                             <a class="dropdown-item" href="#">OpenGL</a>
@@ -87,45 +91,29 @@
                 <a class="list-group-item list-group-item-action active" id="list-part1-list" data-toggle="list" href="#list-part1" role="tab" aria-controls="part1">Part 1</a>
                 <a class="list-group-item list-group-item-action" id="list-part2-list" data-toggle="list" href="#list-part2" role="tab" aria-controls="part2">Part 2</a>
                 <a class="list-group-item list-group-item-action" id="list-part3-list" data-toggle="list" href="#list-part3" role="tab" aria-controls="part3">Part 3</a>
-                <a class="list-group-item list-group-item-action" id="list-demop5js1-list" data-toggle="list" href="#list-demop5js1" role="tab" aria-controls="demop5js1">Demo of p5.js: Rotating ellipses</a>
-                <a class="list-group-item list-group-item-action" id="list-demop5js2-list" data-toggle="list" href="#list-demop5js2" role="tab" aria-controls="demop5js2">Demo of p5.js: Colorfull canvas</a>
-
+                <a class="list-group-item list-group-item-action" id="list-part4-list" data-toggle="list" href="#list-part4" role="tab" aria-controls="part4">Q-learning and Cart-pole problem</a>
             </div>
         </div>
         <div class="col-8">
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="list-part1" role="tabpanel" aria-labelledby="list-part1-list">
-                    <h1>hello world</h1>
+                    <h1>reinforcement learning under construction</h1>
 
                 </div>
                 <div class="tab-pane fade" id="list-part2" role="tabpanel" aria-labelledby="list-part2-list">...</div>
                 <div class="tab-pane fade" id="list-part3" role="tabpanel" aria-labelledby="list-part3-list">...</div>
-                <div class="tab-pane fade" id="list-demop5js1" role="tabpanel" aria-labelledby="list-demop5js1-list">
+                <div class="tab-pane fade" id="list-part4" role="tabpanel" aria-labelledby="list-part4-list">
                     <div class="media">
-                        <img width="50%" , height="316%" src="./media/image-p5js-demo1.png" alt=" image of p5js demo1">
+                        <iframe width="50%" height="315" src="https://www.youtube.com/embed/u6wv3tijlxA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                     
                         <div class="media-body ml-1">
-                            <h3>Using Perlin noise to animate several ellipses</h3>
-                            <h4>to see the animation, click on the button</h4>
-                            <h4><a class="btn btn-large btn-info" href="./p5js-demo1.html" target="_blank">Open the animation</a></button></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="list-demop5js2" role="tabpanel" aria-labelledby="list-demop5js2-list">
-                    <div class="media">
-                        <img width="50%" , height="316%" src="./media/colorfull canvas with cam.jpg" alt=" image of p5js demo2">
-                        <div class="media-body ml-1">
-                            <h4>Using p5.js to change <code>Hue</code> of colors in HSL color Mode to draw.</h4>
-                            <h5>The idea of hue change came from <a href="https://medium.com/@kellylougheed/rainbow-paintbrush-in-p5-js-e452d5540b25" target="_blank">this page.</a></h5>
-                            <h5>Here, taking webcam snapshots via added buttons is added.</h5>
-                            <h5><a class="btn btn-large btn-info" href="./p5js-demo2.html" target="_blank">Open the canvas to draw</a></button></h5>
+                            <h3>OpenAI and Gym for cart-pole problem</h3>
+                            <h5> Here. Installation of the Gym is mentioned. Then, Q-learning is reviewed shortly. Afterwards, all steps are expressed in Python. Moreover, simulations are provided throughout the presentation.</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
 
     <script src="./node_for_git/jquery.min.js"></script>
     <script src="./node_for_git/tether.min.js"></script>
