@@ -12,7 +12,8 @@ let radio;
 let mySound;
 function setup() {
     if (windowWidth < 500) {
-        createCanvas(windowWidth, windowHeight - 100);
+        createCanvas(windowWidth - 100, windowHeight - 100);
+        
     }
     else {
         createCanvas(500, windowHeight - 100);

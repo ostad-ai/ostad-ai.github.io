@@ -11,7 +11,7 @@ function setup() {
     c = createCanvas(windowWidth, windowHeight-sliderH);
     pixelDensity(1);
     createSpan("Pen size:");
-    slider = createSlider(0, 150, 30);
+    slider = createSlider(5, 150, 30);
     button = createButton('Take snapshot');
     button2 = createButton('Paste snapshot');
     button3 = createButton('Save canvas');
