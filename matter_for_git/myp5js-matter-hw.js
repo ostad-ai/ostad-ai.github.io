@@ -10,13 +10,16 @@ let myGs = [];
 let myCircles = [];
 let radio;
 let mySound;
+let myMobile;
 function setup() {
     if (windowWidth < 500) {
-        createCanvas(windowWidth - 100, windowHeight - 100);
+        createCanvas(windowWidth, windowHeight - 100);
+        myMobile = true;
         
     }
     else {
         createCanvas(500, windowHeight - 100);
+        myMobile = false;
     }
         mySound = loadSound('./media/soundeffect1.wav');
 
@@ -37,15 +40,31 @@ function setup() {
    
 }
 
+function mousePressed() {
+    if (myMobile) {
+        if (!mySound.isPlaying()) {
+            mySound.play();
+        }
+        if (radio.value() == 'circle') {
+            myCircles.push(new myCircle(mouseX, mouseY, random(5, 15)));
+        }
+        else {
+            myBoxes.push(new myBox(mouseX, mouseY, random(10, 40), random(10, 40)));
+        }
+    }
+
+}
 function mouseDragged() {
-    if (!mySound.isPlaying()) {
-        mySound.play();
-    }
-    if (radio.value() == 'circle') {
-        myCircles.push(new myCircle(mouseX, mouseY, random(5, 15)));
-    }
-    else {
-        myBoxes.push(new myBox(mouseX, mouseY, random(10, 40), random(10, 40)));
+    if (!myMobile) {
+        if (!mySound.isPlaying()) {
+            mySound.play();
+        }
+        if (radio.value() == 'circle') {
+            myCircles.push(new myCircle(mouseX, mouseY, random(5, 15)));
+        }
+        else {
+            myBoxes.push(new myBox(mouseX, mouseY, random(10, 40), random(10, 40)));
+        }
     }
 }
 
@@ -53,7 +72,13 @@ function draw() {
     background(150);
     stroke(0);
     textSize(20);
-    text('Drag mouse to create objects',15,25);
+    if (myMobile) {
+        text('click on screen to create objects', 15, 25);
+    }
+    else {
+        text('Drag mouse to create objects', 15, 25);
+
+    }
     for (let i = 0; i < myBoxes.length; ++i) {
         myBoxes[i].show();
         if (myBoxes[i].isOffLimits()) {
