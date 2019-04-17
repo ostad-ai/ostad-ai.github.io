@@ -11,18 +11,19 @@ let myCircles = [];
 let radio;
 let mySound;
 let myMobile;
+let can;
 function setup() {
     if (windowWidth < 500) {
-        createCanvas(windowWidth, windowHeight - 100);
+        can=createCanvas(windowWidth, windowHeight - 100);
         myMobile = true;
         
     }
     else {
-        createCanvas(500, windowHeight - 100);
+        can=createCanvas(500, windowHeight - 100);
         myMobile = false;
     }
-        mySound = loadSound('./media/soundeffect1.wav');
-
+    mySound = loadSound('./media/soundeffect1.wav');
+    can.mousePressed(myMousePressed);
     // create an engine
     engine = Engine.create();
     world = engine.world;
@@ -40,7 +41,7 @@ function setup() {
    
 }
 
-function mousePressed() {
+function myMousePressed() {
     if (myMobile) {
         if (!mySound.isPlaying()) {
             mySound.play();
@@ -56,6 +57,7 @@ function mousePressed() {
 }
 function mouseDragged() {
     if (!myMobile) {
+        if (mouseX < width & mouseY<height & mouseY>=0) { 
         if (!mySound.isPlaying()) {
             mySound.play();
         }
@@ -66,6 +68,7 @@ function mouseDragged() {
             myBoxes.push(new myBox(mouseX, mouseY, random(10, 40), random(10, 40)));
         }
     }
+}
 }
 
 function draw() {
