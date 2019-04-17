@@ -11,8 +11,14 @@ let myCircles = [];
 let radio;
 let mySound;
 function setup() {
-    createCanvas(500, windowHeight - 100);
-    mySound = loadSound('./media/soundeffect1.wav');
+    if (windowWidth < 500) {
+        createCanvas(windowWidth, windowHeight - 100);
+    }
+    else {
+        createCanvas(500, windowHeight - 100);
+    }
+        mySound = loadSound('./media/soundeffect1.wav');
+
     // create an engine
     engine = Engine.create();
     world = engine.world;
